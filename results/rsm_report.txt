@@ -1,0 +1,52 @@
+EV RSM Model Report
+===================
+Data source: synthetic demo data (for pipeline check only)
+Rows: 40
+
+Coding (natural -> coded):
+x1 = (temp_c - -26.5151) / 51.4398
+x2 = (time_d - 44.0439) / 42.4655
+
+[particle_n]
+R-squared: 0.8815
+  Intercept : 2.087479e+11
+  x1        : 4.1278011e+08
+  x2        : -3.3207282e+10
+  x1^2      : -5.888532e+08
+  x2^2      : -1.6525762e+09
+  x1:x2     : 1.1452882e+10
+
+[pdi]
+R-squared: 0.9875
+  Intercept : 0.31235984
+  x1        : 0.060047375
+  x2        : 0.11933724
+  x1^2      : 0.038222731
+  x2^2      : 0.028289296
+  x1:x2     : 0.024661654
+
+[zeta_mV]
+R-squared: 0.9485
+  Intercept : -15.924033
+  x1        : 0.41860454
+  x2        : 7.0322023
+  x1^2      : 4.8058569
+  x2^2      : 0.4593578
+  x1:x2     : -2.3681623
+
+[rna_ng_uL]
+R-squared: 0.9699
+  Intercept : 36.035778
+  x1        : -2.2174702
+  x2        : -11.199303
+  x1^2      : -3.8532373
+  x2^2      : -1.7370281
+  x1:x2     : 1.888327
+
+Recommended storage condition by multi-response desirability
+x1=-1.000, x2=-0.967, D=0.9644
+temp_c=-77.955, time_d=2.994
+pred_particle_n=2.49374e+11
+pred_pdi=0.22545
+pred_zeta_mV=-20.1946
+pred_rna_ng_uL=45.4282
