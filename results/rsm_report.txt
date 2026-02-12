@@ -1,51 +1,52 @@
 EV RSM Model Report
 ===================
-Data source: synthetic demo data
+Data source: synthetic demo data (for pipeline check only)
 Rows: 40
+
+Coding (natural -> coded):
+x1 = (temp_c - -26.5151) / 51.4398
+x2 = (time_d - 44.0439) / 42.4655
 
 [particle_n]
 R-squared: 0.8815
-  Intercept   : 2.3534514e+11
-  temp_c      : -2.3469866e+08
-  time_d      : -5.6223998e+08
-  temp_c^2    : -222540.21
-  time_d^2    : -916409.73
-  temp_c:time_d: 5242997.2
+  Intercept : 2.087479e+11
+  x1        : 4.1278011e+08
+  x2        : -3.3207282e+10
+  x1^2      : -5.888532e+08
+  x2^2      : -1.6525762e+09
+  x1:x2     : 1.1452882e+10
 
 [pdi]
 R-squared: 0.9875
-  Intercept   : 0.24694146
-  temp_c      : 0.0014361181
-  time_d      : 0.0017277046
-  temp_c^2    : 1.4445187e-05
-  time_d^2    : 1.5687377e-05
-  temp_c:time_d: 1.128982e-05
+  Intercept : 0.31235984
+  x1        : 0.060047375
+  x2        : 0.11933724
+  x1^2      : 0.038222731
+  x2^2      : 0.028289296
+  x1:x2     : 0.024661654
 
 [zeta_mV]
 R-squared: 0.9485
-  Intercept   : -19.964727
-  temp_c      : 0.15220197
-  time_d      : 0.11441407
-  temp_c^2    : 0.001816236
-  time_d^2    : 0.00025472953
-  temp_c:time_d: -0.0010841174
+  Intercept : -15.924033
+  x1        : 0.41860454
+  x2        : 7.0322023
+  x1^2      : 4.8058569
+  x2^2      : 0.4593578
+  x1:x2     : -2.3681623
 
 [rna_ng_uL]
 R-squared: 0.9699
-  Intercept   : 42.606439
-  temp_c      : -0.15840576
-  time_d      : -0.15595646
-  temp_c^2    : -0.0014562207
-  time_d^2    : -0.00096324119
-  temp_c:time_d: 0.00086445426
+  Intercept : 36.035778
+  x1        : -2.2174702
+  x2        : -11.199303
+  x1^2      : -3.8532373
+  x2^2      : -1.7370281
+  x1:x2     : 1.888327
 
-Prediction grid (first 8 rows)
-temp,time,particle,pdi,zeta,rna
--80,1,2.51714e+11,0.225341,-20.3156,45.733
--80,7,2.4578e+11,0.231042,-19.0965,44.3361
--80,30,2.22422e+11,0.263355,-14.2534,38.3388
--80,90,1.56923e+11,0.425776,-0.350753,17.8967
--20,1,2.39282e+11,0.225515,-22.1459,45.0179
--20,7,2.35235e+11,0.235279,-21.3171,43.9321
--20,30,2.19112e+11,0.283173,-17.9701,39.1278
--20,90,1.72488e+11,0.486237,-7.97028,21.7977
+Recommended storage condition by multi-response desirability
+x1=-1.000, x2=-0.967, D=0.9644
+temp_c=-77.955, time_d=2.994
+pred_particle_n=2.49374e+11
+pred_pdi=0.22545
+pred_zeta_mV=-20.1946
+pred_rna_ng_uL=45.4282
